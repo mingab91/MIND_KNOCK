@@ -1,0 +1,146 @@
+<!DOCTYPE <html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mind Knock</title>
+    <script>
+        const data = ["지금까지<br> 인생에서 가장 큰<br> 모험이었다고<br> 생각하는 일은<br> 무엇인가요?",
+"당신에게<br> 가장 소중한 추억은<br> 무엇인가요?",
+"나는 (   )을 함께<br> 나눌 수 있는 사람이<br> 있으면 좋겠다.<br> 그 이유는 무엇인가요?",
+"왼쪽에 있는 사람과<br> 당신의 공통점이라고<br> 생각되는 것,<br> 세 가지를 말해주세요.",
+"당신이 자라온<br> 방식을 바꿀 수 있다면,<br> 어떤 점을 바꾸고<br> 싶은가요?",
+"마지막으로<br> 다른 사람 앞에서<br> 울었던 적은<br> 언제인가요?<br> 또 혼자 울었던 적은요?",
+"앞으로 꼭<br> 이루고 싶은<br> 사회적 성공이 있나요?<br> 지금 그 일을 위해<br> 어떻게 노력하고 있나요?",
+"어렸을 때<br> 당신은<br> 어떤 아이였나요?",
+"'사랑하는 것'과 <br>'사랑받는 것' 중<br> 당신에겐 <br>무엇이 더 쉽나요?",
+"당신의 기분이 우울할 때,<br> 상대방이 그것에<br> 어떻게 반응해주길<br> 원하나요?",
+"요즘 가장 자주<br> 연락하는 사람은<br> 누구인가요? 보통 무슨<br> 내용인가요?",
+"요즘 가장<br> 고민하고 있는<br> 한 가지를 <br>이곳에서<br> 털어놓아보세요.",
+"어렸을 때 <br>커서 무엇이 되고<br> 싶다고 생각했나요?",
+"지금까지 오랫동안<br> 꿈꿔왔는데 <br>못해본 것이 있나요? <br>왜 아직 이루지 못했나요?",
+"지금까지 <br>당신의 인생에서<br> 가장 고통스럽고 슬픈 시간은<br> 언제였나요?",
+"지금까지<br> 용서하지 못하고<br> 미워하는 사람이<br> 있나요?",
+"당신이 <br>가지고 있는 <br>꿈과 비전이<br> 있나요?",
+"당신이 죽은 뒤, <br>사람들이 당신을 <br>어떤 사람으로<br> 기억해주었으면<br> 하나요?",
+"살면서 정말 <br>기뻤던 기억을<br> 한 가지 <br>소개해주세요.",
+"올해 계획하거나<br> 결심한 일이<br> 무엇인가요?"];
+
+
+        console.log("data", data);
+
+        function output() {
+
+            console.log("함수작동");
+
+            var random = Math.floor(Math.random() * data.length);
+            console.log(random)
+            var textContent = data[random];
+            document.querySelector("#content").innerHTML = textContent;
+            console.log(textContent)
+
+
+        }
+
+    </script>
+    <style>
+        #container {
+            width: 390px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: #FFEEEE;
+            ;
+        }
+
+        #context {
+            width: 100%;
+            height: 50px;
+            background-color: #FF786F;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            padding-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        #back {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+
+        #back a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #tip {
+            color: #FF786F;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #content {
+            width: 100%;
+            height: 270px;
+            font-size: 27px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #FF786F;
+            ;
+            margin: 30px 0;
+            color: white;
+            line-height: 1.8;
+            padding-top: 40px;
+        }
+
+        #start {
+            width: 130px;
+            background-color: #FF786F;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        #start:hover {
+            background-color: #FF786F;
+
+        }
+    </style>
+</head>
+<div id="container">
+    <div id="context">
+        <div id="back">
+            <a href="main.html"> <</a>
+        </div>
+        Question 02
+    </div>
+    <div id="tip">상대방 이야기를 들을땐 <br>
+        옳고 그름을 판단하기보다 <br>
+        공감하며 있는 그대로 <br>
+        받아들여주세요.</div>
+
+
+
+    <div id="content">
+    </div>
+    <div id="start" onclick="output()">
+        SELECT
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE <html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mind Knock</title>
+    <script>
+        const data = ["가장 최근에 크게<br> 화가 났던 적은 <br>언제인가요?<br> 무슨일이 있었나요?", "가장 좋아하는 친구는<br> 누구인가요?<br> 구체적으로<br> 그 친구의 어떤 점이<br> 좋은가요?", 
+        "지금 하고 있는 일<br> 또는 공부를 어떻게<br> 시작하게 되었나요?",
+            "당신의 이름은<br> 어떤 뜻인가요?", "당신의 어머니는<br> 어떤 분인가요?<br> 그녀의 어떤 점을<br> 존경하나요?",
+            "살면서 가장 '멀리'<br>떠나본 곳이 어디인가요?<br> 그곳에서 가장 즐거웠던<br> 순간은 언제인가요?",
+            "스트레스를<br> 잔뜩 받은 날,<br> 당신은 어떻게<br> 스트레스를 푸나요?",
+            "나에게 가장 소중한<br> 물건은 무엇인가요?",
+            "당신은<br> 아침형 인간인가요?",
+            "요즘 당신이<br> 가장 자주 사용하는<br> 휴대폰 앱 3가지는<br> 무엇인가요?",
+            "지금 시간과<br> 돈에 구애받지 않고<br> 떠날 수 있다면,<br> 어디서 어떤 시간을<br> 보내고 싶나요?",
+            "캠핑 vs 호텔 숙박,<br> 당신은 어떤 여행을<br> 선택할 건가요?",
+            "'소울메이트'가<br> 있다고 믿나요?",
+            "매일 먹어도<br> 질리지 않는 음식은<br> 무엇인가요?",
+            "타임캡슐을 묻는다면<br> 안에 무엇을 넣을건가요?",
+            "당신은 스스로<br> 결정을 내리는 편인가요?<br> 다른 사람들이<br> 결정할 때까지<br> 기다리는 편인가요?",
+            "잠들기 전 30분,<br> 요즘 당신은<br> 그 시간에 무엇을 하나요?",
+            "지난 주 토요일에<br> 무엇을 하며<br> 시간을 보냈나요?",
+            "이번 주 토요일엔<br> 뭘 할 건가요?","요즘 당신의<br> 건강 상태를<br> 1~10으로<br> 나타낸다면?",
+            "주변 사람들은<br> 당신을 어떤 사람이라고<br> 말하나요?<br> 당신도 동의하나요?",
+            "부모님께<br> 물려받은 습관이나 태도 중<br> 무엇이 가장<br> 마음에 드나요?",
+            "동물의 왕국에서,<br> 당신은 어떤 동물<br> 역할이 어울린다고<br> 생각하나요?<br> 그 이유는 무엇인가요?",
+            "오늘 나를<br> 가장 신경 쓰이게<br> 한 것은 (   )였다",
+            "지금까지 가장<br> 큰 돈을 썼을 때는<br> 언제였나요?",
+            "요즘 당신이<br> 참석하고 있는<br> 모임이 있나요?<br> 무엇인가요?",
+            "당신에게<br> '완벽한' 하루란<br> 어떤 날인가요?"];
+
+
+        console.log("data", data);
+
+        function output() {
+
+            console.log("함수작동");
+
+            var random = Math.floor(Math.random() * data.length);
+            console.log(random)
+            var textContent = data[random];
+            document.querySelector("#content").innerHTML = textContent;
+            console.log(textContent)
+
+
+        }
+
+    </script>
+    <style>
+        #container {
+            width: 390px;
+            height: 100vh;
+            margin: 0 auto;
+            background-color: #FFEEEE;
+            ;
+        }
+
+        #context {
+            width: 100%;
+            height: 50px;
+            background-color: #FF786F;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            padding-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        #back {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+
+        #back a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #tip {
+            color: #FF786F;
+            font-size: 18px;
+            line-height: 1.6;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        #content {
+            width: 100%;
+            height: 270px;
+            font-size: 27px;
+            font-weight: bold;
+            text-align: center;
+            background-color: #FF786F;
+            ;
+            margin: 30px 0;
+            color: white;
+            line-height: 1.8;
+            padding-top: 40px;
+        }
+
+        #start {
+            width: 130px;
+            background-color: #FF786F;
+            margin: 0 auto;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+
+        }
+
+        #start:hover {
+            background-color: #FF786F;
+
+        }
+    </style>
+</head>
+<div id="container">
+    <div id="context">
+        <div id="back">
+            <a href="main.html"> <</a>
+        </div>
+        Question 01
+    </div>
+    <div id="tip">상대방 이야기를 들을땐 <br>
+        옳고 그름을 판단하기보다 <br>
+        공감하며 있는 그대로 <br>
+        받아들여주세요.</div>
+
+
+
+    <div id="content">
+    </div>
+    <div id="start" onclick="output()">
+        SELECT
+    </div>
+</div>
+
+<body>
+
+</body>
+
+</html>
